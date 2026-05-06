@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wayam Labs — We're building</title>
+<meta name="description" content="Wayam Labs builds technology for the people behind the work. Site coming soon." />
+<link rel="stylesheet" href="../../colors_and_type.css" />
+<link rel="icon" type="image/png" href="../../assets/social/png/wayam-ink-180.png" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; min-height: 100%; }
+  body {
+    background: var(--paper-0);
+    color: var(--ink-1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .uc-page {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: var(--page-max);
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px var(--page-gutter);
+    gap: 64px;
+  }
+
+  /* Header */
+  .uc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .uc-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink-0);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+  }
+  .uc-brand img { display: block; }
+  .uc-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .uc-pulse {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(181, 86, 58, 0.5);
+    animation: pulse 2.4s var(--ease-in-out) infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(181, 86, 58, 0.45); }
+    70%  { box-shadow: 0 0 0 10px rgba(181, 86, 58, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(181, 86, 58, 0); }
+  }
+
+  /* Hero */
+  .uc-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 22ch;
+    align-self: center;
+    width: 100%;
+    padding: 64px 0;
+  }
+  .uc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 36px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .uc-eyebrow .rule {
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--border-default);
+  }
+
+  .uc-headline {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(44px, 7vw, 96px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    color: var(--ink-0);
+    text-wrap: balance;
+  }
+  .uc-headline em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+
+  .uc-lead {
+    margin: 32px 0 0;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 52ch;
+    text-wrap: pretty;
+  }
+
+  /* Inline contact */
+  .uc-contact {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 48px;
+    align-items: baseline;
+  }
+  .uc-contact .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .uc-contact a {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-0);
+    text-decoration: none;
+    letter-spacing: -0.005em;
+    border-bottom: 1px solid var(--border-default);
+    padding-bottom: 2px;
+    transition: color var(--duration) var(--ease-out),
+                border-color var(--duration) var(--ease-out);
+  }
+  .uc-contact a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* Footer */
+  .uc-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-subtle);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .uc-footer .products {
+    display: flex;
+    gap: 18px;
+  }
+  .uc-footer .products span {
+    color: var(--ink-2);
+  }
+  .uc-footer .meta {
+    color: var(--ink-3);
+  }
+
+  @media (max-width: 720px) {
+    .uc-page { gap: 48px; padding: 24px 20px; }
+    .uc-hero { padding: 32px 0; }
+    .uc-eyebrow { margin-bottom: 24px; }
+    .uc-lead { margin-top: 24px; font-size: 17px; }
+    .uc-contact { margin-top: 40px; gap: 20px 32px; }
+    .uc-contact a { font-size: 19px; }
+    .uc-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="uc-page">
+
+    <header class="uc-header">
+      <a href="#" class="uc-brand" aria-label="Wayam Labs">
+        <img src="../../assets/wayam-labs-mark.svg" alt="" width="22" height="22" style="color:var(--ink-0)" />
+        <span>Wayam Labs</span>
+      </a>
+      <div class="uc-status" aria-live="polite">
+        <span class="uc-pulse" aria-hidden="true"></span>
+        <span>In construction</span>
+      </div>
+    </header>
+
+    <section class="uc-hero">
+      <div class="uc-eyebrow">
+        <span class="rule" aria-hidden="true"></span>
+        <span>Coming soon · 2026</span>
+      </div>
+      <h1 class="uc-headline">
+        We're building something <em>considered</em>.
+      </h1>
+      <p class="uc-lead">
+        Wayam Labs builds technology for the people behind the work. Our products help professionals own their career story, and help companies find the people who'll actually thrive. The site is on the way.
+      </p>
+
+      <div class="uc-contact">
+        <div>
+          <span class="label">For everything else</span>
+          <a href="/cdn-cgi/l/email-protection#89e1ece5e5e6c9fee8f0e8e4e5e8ebfaa7eae6e4"><span class="__cf_email__" data-cfemail="046c6168686b4473657d6569686566772a676b69">[email&#160;protected]</span></a>
+        </div>
+        <div>
+          <span class="label">For press &amp; partners</span>
+          <a href="/cdn-cgi/l/email-protection#d9b1bcb5b5b699aeb8a0b8b4b5b8bbaaf7bab6b4e6aaacbbb3bcbaade489abbcaaaafcebe9fceb9ffcebe989b8abadb7bcabaab1b0a9"><span class="__cf_email__" data-cfemail="2555574056566552445c4448494447560b464a48">[email&#160;protected]</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="uc-footer">
+      <div class="products">
+        <span>CareerID</span>
+        <span>JobRole</span>
+        <span>CareerID Bridge</span>
+      </div>
+      <div class="meta">
+        © 2026 Wayam Labs · Wayam — "we" in Sanskrit
+      </div>
+    </footer>
+
+  </div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
