@@ -1,8 +1,8 @@
-# Railway works without this file — it's here only to pin the start command
-# explicitly if Railway ever fails to auto-detect Next.js.
 [build]
 builder = "NIXPACKS"
+buildCommand = "npm run build"
 
 [deploy]
 startCommand = "npm run start"
+healthcheckPath = "/"
 restartPolicyType = "ON_FAILURE"
