@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper-0: #FBF9F5;
+    --paper-1: #F5F2EC;
+    --ink-0: #1A1815;
+    --ink-1: #2E2A24;
+    --ink-2: #5C564C;
+    --ink-3: #8A8478;
+    --ink-4: #B8B2A4;
+    --accent: #B5563A;
+    --border-subtle: #E5E0D6;
+    --border-default: #D5CFC2;
+  }
+
+  html, body {
+    background: var(--paper-0);
+    color: var(--ink-1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #F1D9CD;
+    color: var(--ink-0);
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(181, 86, 58, 0.45); }
+  70%  { box-shadow: 0 0 0 10px rgba(181, 86, 58, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(181, 86, 58, 0); }
+}
+.pulse-ring { animation: pulse-ring 2.4s cubic-bezier(0.5, 0, 0.2, 1) infinite; }
