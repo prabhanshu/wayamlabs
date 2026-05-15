@@ -43,41 +43,25 @@ export default function UnderConstruction() {
             the way.
           </p>
 
-          {/*<div className="mt-14 flex flex-wrap gap-y-6 gap-x-12 items-baseline">*/}
-          {/*  <div>*/}
-          {/*    <span className="block font-mono text-[11px] tracking-caps uppercase text-ink-3 mb-1">*/}
-          {/*      For everything else*/}
-          {/*    </span>*/}
-          {/*    <a*/}
-          {/*      href="mailto:hello@wayamlabs.com"*/}
-          {/*      className="font-serif italic text-[22px] text-ink-0 no-underline tracking-snugger border-b border-border-default pb-[2px] transition-colors duration-200 hover:text-accent hover:border-accent"*/}
-          {/*    >*/}
-          {/*      hello@wayamlabs.com*/}
-          {/*    </a>*/}
-          {/*  </div>*/}
-          {/*  <div>*/}
-          {/*    <span className="block font-mono text-[11px] tracking-caps uppercase text-ink-3 mb-1">*/}
-          {/*      For press &amp; partners*/}
-          {/*    </span>*/}
-          {/*    <a*/}
-          {/*      href="mailto:press@wayamlabs.com"*/}
-          {/*      className="font-serif italic text-[22px] text-ink-0 no-underline tracking-snugger border-b border-border-default pb-[2px] transition-colors duration-200 hover:text-accent hover:border-accent"*/}
-          {/*    >*/}
-          {/*      press@wayamlabs.com*/}
-          {/*    </a>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+          <div className="mt-14">
+            <a
+              href="mailto:hello@wayamlabs.net"
+              className="font-serif italic text-[22px] text-ink-0 no-underline tracking-snugger border-b border-border-default pb-[2px] transition-colors duration-200 hover:text-accent hover:border-accent"
+            >
+              hello@wayamlabs.net
+            </a>
+          </div>
         </section>
 
         {/* Footer */}
         <footer className="flex flex-wrap items-center justify-between gap-4 pt-8 border-t border-border-subtle font-mono text-[11px] tracking-caps uppercase text-ink-3">
           <div className="flex gap-[18px]">
-            <span className="text-ink-2">CareerID</span>
+            <a href="https://careerid.io" target="_blank" rel="noopener noreferrer" className="text-ink-2 no-underline hover:text-ink-0 transition-colors duration-200">CareerID</a>
             <span className="text-ink-2">JobRole</span>
             <span className="text-ink-2">CareerID Bridge</span>
           </div>
           <div className="text-ink-3">
-            © 2026 Wayam Labs · Wayam — &quot;we&quot; in Sanskrit
+            © {new Date().getFullYear()} Wayam Labs · Wayam — &quot;we&quot; in Sanskrit
           </div>
         </footer>
       </div>
