@@ -45,10 +45,10 @@ export default function UnderConstruction() {
 
           <div className="mt-14">
             <a
-              href="mailto:hello@wayamlabs.net"
+              href="mailto:hello@wayamlabs.com"
               className="font-serif italic text-[22px] text-ink-0 no-underline tracking-snugger border-b border-border-default pb-[2px] transition-colors duration-200 hover:text-accent hover:border-accent"
             >
-              hello@wayamlabs.net
+              hello@wayamlabs.com
             </a>
           </div>
         </section>
